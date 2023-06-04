@@ -7,7 +7,7 @@ import os
 from dotenv import find_dotenv, load_dotenv
 from langchain.llms import AzureOpenAI
 import os
-from langchain import PromptTemplate, OpenAI, LLMChain
+from langchain import PromptTemplate, LLMChain
 import chainlit as cl
 
 _ = load_dotenv(find_dotenv())
@@ -26,7 +26,7 @@ llm = AzureOpenAI(
 
 template = """Question: {question}
 
-Answer: """
+Answer: Let's think step by step."""
 
 
 @cl.langchain_factory
